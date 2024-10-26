@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expandable Box</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .expandable-content {
+      max-height: 2.5rem; /* Adjust this to fit the height of one line */
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+    .expandable-content.expanded {
+      max-height: 400px; /* Adjust based on content */
+      overflow: scroll;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-4xl">
+    <div class="flex flex-col md:flex-row items-start md:items-center">
+      <textarea
+        id="keywords"
+        placeholder="Keyword 1, keyword 2 &hellip;"
+        class="p-2 border border-gray-300 rounded w-full md:w-3/4 h-32 resize-none"
+      ></textarea>
+      <button
+        type="button"
+        id="process-button"
+        class="mt-4 md:mt-0 md:ml-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      >
+        Process
+      </button>
+    </div>
+    <div class="mt-6">
+      <div class="expandable-content">
+        <p class="text-gray-700">
+          Embedding: []
+        </p>
+      </div>
+      <button
+        type="button"
+        class="mt-2 px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400 toggle-button"
+      >
+        Expand
+      </button>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.querySelector('.toggle-button');
+      const expandableContent = document.querySelector('.expandable-content');
+      currentUser = 0
+
+      toggleButton.addEventListener('click', () => {
+        const isExpanded = expandableContent.classList.toggle('expanded');
+        toggleButton.textContent = isExpanded ? 'Collapse' : 'Expand';
+      });
+
+      fetch("http://localhost:5000/setuser", {
+        method: "POST",
+        body: currentUser,
+      });
+
+      const processButton = document.querySelector("#process-button");
+      const keywords = document.querySelector("#keywords");
+
+
+      processButton.addEventListener('click', () => {
+        currentUser += 1
+        fetch("http://localhost:5000/setuser",
+        {
+          method: "POST",
+          body: currentUser,
+        });
+        console.log("aboba");
+        fetch("http://localhost:5000/get_user_embedding",
+        {
+          method: "SEARCH",
+          body: keywords.value
+        })
+        .then(response => response.text())
+        .then(text => {
+          console.log(text)
+          expandableContent.children[0].innerHTML = "Embedding: " + text
+        });
+      });
+    });
+  </script>
+</body>
+</html>

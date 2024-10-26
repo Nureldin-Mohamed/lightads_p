@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root width="{{width}}" height="{{height}}" bg_color="(0,0,0,0)">
+    <FTable width="0" height="0" bg_color="(0, 0, 0, 0)" direction="{{ main_table_direction }}" offsets="[0, 55]" use_percent="True">
+        <Padding width="0" height="0" bg_color="{{ main_color }}" padding="(20, 20, 20 ,20)">
+            <FTable width="0" height="0" bg_color="(0, 0, 0, 0)" direction="h" offsets="[0, 80]" use_percent="True">
+                <Padding width="0" height="0" bg_color="(0,0,0,0)" padding="(0, 20, 0, 0)">
+                    <FitText width="0" height="0" text="{{ slogan }}" max_font_size="120" line_spacing="2.2" font_path="{{ slogan_font_path }}" bg_color="(0,0,0,0)" font_color="(255,255,255,255)"/>
+                </Padding>
+                <Picture width="0" height="0" bg_color="(0,0,0,0)" img_source="{{ svg_icon_path }}" mode="fit"/>
+            </FTable>
+        </Padding>
+        <FTable width="0" height="0" bg_color="(255, 255, 255, 255)" direction="h" offsets="[0, 60]" use_percent="True">
+            <Padding width="0" height="0" bg_color="(0,0,0,0)" padding="(10,10,10,10)">
+                <Picture width="0" height="0" bg_color="(0,0,0,0)" img_source="{{ product_img_path }}" mode="fit"/>
+            </Padding>
+            <FTable width="0" height="0" bg_color="(0, 0, 0, 0)" direction="v" offsets="[0, 70]" use_percent="True">
+                <Padding width="0" height="0" bg_color="(0,0,0,0)" padding="(10,0,10,10)">
+                    <FitText width="0" height="0" text="{{ product_name }}" max_font_size="40" line_spacing="2.0" font_path="fonts/PTSerif-Bold.ttf" bg_color="(0,0,0,0)" font_color="(0,0,0,255)"/>
+                </Padding>
+                <Padding width="0" height="0" bg_color="(0, 0, 0, 0)" padding="(10,10,5,10)">
+                    <Padding width="0" height="0" bg_color="(253, 190, 99, 255)" padding="(7, 7, 7, 7)">
+                        <FitText width="0" height="0" text="LEARN MORE" max_font_size="40" line_spacing="1.5" font_path="{{ product_name_font_path }}" bg_color="(0, 0, 0, 0)" font_color="(0,0,0,255)"/>
+                    </Padding>
+                </Padding>
+            </FTable>
+        </FTable>
+    </FTable>
+</Root>

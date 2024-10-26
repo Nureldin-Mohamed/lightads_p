@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Root width="844" height="144" bg_color="(0,0,0,0)">
+    <FTable width="0" height="0" bg_color="(0, 0, 0, 0)" direction="h" offsets="[0, 66]" use_percent="True">
+        <Padding width="0" height="0" bg_color="(198, 63, 45, 255)" padding="(20, 20, 20 ,20)">
+            <FTable width="0" height="0" bg_color="(198, 63, 45, 255)" direction="h" offsets="[0, 80]" use_percent="True">
+                <Padding width="0" height="0" bg_color="(0,0,0,0)" padding="(0, 20, 0, 0)">
+                    <FitText width="0" height="0" text="For every plot twist, there's a sip of bliss. Also: amogus aboba adirondacks" max_font_size="120" line_spacing="2.2" font_path="fonts/Roca Regular.ttf" bg_color="(0,0,0,0)" font_color="(255,255,255,255)"/>
+                </Padding>
+                <Picture width="0" height="0" bg_color="(0,0,0,0)" img_source="img/tv.png" mode="fit"/>
+            </FTable>
+        </Padding>
+        <FTable width="0" height="0" bg_color="(255, 255, 255, 255)" direction="h" offsets="[0, 40]" use_percent="True">
+            <Padding width="0" height="0" bg_color="(0,0,0,0)" padding="(10,10,10,10)">
+                <Picture width="0" height="0" bg_color="(0,0,0,0)" img_source="img/tea_ed.png" mode="fit"/>
+            </Padding>
+            <FTable width="0" height="0" bg_color="(0, 0, 0, 0)" direction="v" offsets="[0, 70]" use_percent="True">
+                <Padding width="0" height="0" bg_color="(0,0,0,0)" padding="(20,10,10,10)">
+                    <FitText width="0" height="0" text="Taylors of Harrogate Yorkshire Tea" max_font_size="40" line_spacing="2.0" font_path="fonts/PTSerif-Bold.ttf" bg_color="(0,0,0,0)" font_color="(0,0,0,255)"/>
+                </Padding>
+                <Padding width="0" height="0" bg_color="(0, 0, 0, 0)" padding="(10,10,5,10)">
+                    <Padding width="0" height="0" bg_color="(253, 190, 99, 255)" padding="(7, 7, 7, 7)">
+                        <FitText width="0" height="0" text="GET IT NOW" max_font_size="40" line_spacing="1.5" font_path="fonts/Times New Roman.ttf" bg_color="(0, 0, 0, 0)" font_color="(0,0,0,255)"/>
+                    </Padding>
+                </Padding>
+            </FTable>
+        </FTable>
+    </FTable>
+</Root>
+
+<!-- <Root width="1000" height="400" bg_color="(0, 0, 0, 0)">
+    <FTable width="0" height="0" bg_color="(255, 0, 0, 255)" direction="h" offsets="[0, 66]" use_percent="True">
+        <Padding width="0" height="0" bg_color="(0,0,0,0)" padding="40">
+            <FitText width="0" height="0" text="With every sip of bliss comes a plot twist" max_font_size="120" line_spacing="1.8" font_path="fonts/ArchivoBlack-Regular.ttf" bg_color="(0,0,0,0)" font_color="(255,255,255,255)"/>
+        </Padding>
+        <FTable width="0" height="0" bg_color="(255, 255, 255, 255)" direction="v" offsets="[0, 70, 85]" use_percent="True">
+            <Padding width="0" height="0" bg_color="(0,0,0,0)" padding="20">
+                <Picture width="0" height="0" bg_color="(0,0,0,0)" img_source="img/tea_ed.png" mode="fit"/>
+            </Padding>
+            <FitText width="0" height="0" text="Yorkshire Tea" max_font_size="40" line_spacing="1.5" font_path="fonts/Times New Roman.ttf" bg_color="(0,0,0,0)" font_color="(0,0,0,255)"/>
+            <FitText width="0" height="0" text="Only $16.99" max_font_size="30" line_spacing="1.5" font_path="fonts/Times New Roman.ttf" bg_color="(0,0,0,0)" font_color="(0,0,255,255)"/>
+        </FTable>
+    </FTable>
+</Root> -->
+
+<!-- next steps: 
+    - eliminate necessary width and height
+    - do proper error handling
+    - write an extension for vscode
+    - think how to render this stuff in html
+        - for html, we can simply provide an anchor 
+          where the html element will be located. 
+-->
